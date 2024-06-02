@@ -1,5 +1,4 @@
 require('dotenv').config()
-
 const express = require('express')
 const path = require('path')
 const axios = require('axios')
@@ -16,9 +15,7 @@ const PORT = 5050
 
 const JWT = process.env.JWT_TOKEN
 
-app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/views'))
-app.engine('ejs', ejsmate)
 
 app.use(express.static(path.join(__dirname, '/public')))
 app.use(express.urlencoded({ extended: true }))
