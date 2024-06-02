@@ -6,6 +6,10 @@
   "scripts": {
     "test": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "api_card-swipe"
+  },
   "author": "Aswinr24",
   "license": "ISC",
   "dependencies": {
