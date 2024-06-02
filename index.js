@@ -33,10 +33,12 @@ if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir)
 }
 
+const responseObject = { message: 'hello' }
+
 const upload = multer({ dest: uploadsDir })
 
 app.get('/', (req, res) => {
-  res.render('index.ejs')
+  res.json(responseObject)
 })
 
 app.post('/upload', upload.single('file'), async (req, res) => {
